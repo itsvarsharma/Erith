@@ -19,15 +19,16 @@ box-shadow: 0px 0px 5px #8a8a8a3a;
 padding: 10px;
 }
 #calc{  
-    color: #fff;
+color: #fff;
 height: 100px;
 width: 360px;
 font-size: 36px;
 text-align: right; 
-border: 5px;    
-/* box-shadow: 0px 0px 5px #1f1f1f; */
+border: 5px; 
 padding: 0px 20px 20px 0px ;
-}  
+box-shadow: none;
+background-color: #2d2b36;
+}
 #clear{
     width: 180px;   
 }   
@@ -49,8 +50,9 @@ input
     cursor: pointer;  
 }
 input:active {
-        transform: translateY(5px);
-        box-shadow:-1px -1px 5px 0px #00000027;
+        transform: translateY(0px);
+        font-size: 0.9999999999rem;
+        box-shadow:none;
 }  
 .numbers{
     color: aqua;
@@ -59,14 +61,13 @@ input:active {
 .equal {
     color: aquamarine;
     width: 180px;
-    /* background-color: rgba(73, 139, 73, 0.158); */
 }
 </style>  
 </head>  
 <body>  
 <div class= "formstyle">  
 <form name = "form1">  
-    <input id = "calc" type ="text" name = "answer"> <br> <br>  
+    <input disabled id = "calc" type ="text" name = "answer"> <br> <br>  
     <input type = "button" value = "AC" onclick = "form1.answer.value = ' ' " id= "clear" >  
     <input class="numbers" type = "button" value = "." onclick = "form1.answer.value += '.' ">  
     <input type = "button" value = "/" onclick = "form1.answer.value += '/' ">  
