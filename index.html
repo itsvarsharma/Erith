@@ -29,8 +29,8 @@ padding: 0px 20px 20px 0px ;
 box-shadow: -1px -1px 1px  #8a8a8a21 inset,1px 1px 1px #05000021 inset;
 background-color: #2d2b36;
 }
-#clear{
-    width: 180px;   
+.clear{
+    color: #e3593e;   
 }   
 input  
 {  
@@ -42,7 +42,7 @@ input
     text-align: center;
     margin: 10px;
     border: 1px;
-    color: rgb(127, 255, 144);
+    color: rgb(77, 227, 97);
 
     background-color: rgba(255, 255, 255, 0.01);
     /* box-shadow: 2px 0px 2px 2px 5px #9d9c9c57; */
@@ -59,7 +59,6 @@ input:active {
     background-color: rgba(255, 255, 255, 0.007);
 }
 .equal {
-    color: aquamarine;
     width: 180px;
 }
 </style>  
@@ -68,7 +67,8 @@ input:active {
 <div class= "formstyle">  
 <form name = "form1">  
     <input disabled id = "calc" type ="text" name = "answer"> <br> <br>  
-    <input type = "button" value = "AC" onclick = "form1.answer.value = ' ' " id= "clear" >  
+    <input type = "button" value = "AC" onclick = "form1.answer.value = ' ' " class= "clear" >  
+    <input type = "button" class="clear" value = "DEL" onclick = "form1.answer.value= form1.answer.value.substring(0,form1.answer.value.length-1)">  
     <input class="numbers" type = "button" value = "." onclick = "form1.answer.value += '.' ">  
     <input type = "button" value = "/" onclick = "form1.answer.value += '/' ">  
     <br>
